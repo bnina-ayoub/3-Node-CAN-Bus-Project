@@ -1,6 +1,6 @@
 ## CAN Bus Nodes-to-Gateway LEDs Control (**Beginner's Guide**)
 
-This project demonstrates a basic implementation of CAN Bus communication between STM32F407V nodes and a gateway, controlling the internal LEDs on the STM32 boards based on user input.
+This project demonstrates a basic implementation of CAN Bus communication between STM32F407G-DISC1 nodes and a gateway, controlling the internal LEDs on the STM32 boards based on user input.
 
 **Features:**
 
@@ -27,12 +27,13 @@ This project demonstrates a basic implementation of CAN Bus communication betwee
 * `stm32f4xx_hal.h`: STM32 HAL library header.
 * `wiring_schematic.jpg`: Schematic diagram of the hardware connections.
 
-**Building the Project:**
+**Building and Deploying the Project:**
 
-1. Install STM32CubeIDE and configure it for your specific STM32F407G-DISC1 development boards.
-2. Import this project into STM32CubeIDE.
-3. Update `main.c` with any necessary configuration changes (e.g., pin assignments for user buttons and potentiometers, internal LED control functions).
-4. Build and deploy the code to your STM32F407V boards.
+* Install STM32CubeIDE and configure it for your specific STM32F407V development boards.
+* Import this project into STM32CubeIDE.
+* For the Gateway: Update the main.c file within the gateway/ folder with any necessary configuration changes (e.g., CAN Bus filtering based on NODE_ID).
+* For each Node: Update the main.c file within the node/ folder with the appropriate BOARD value (e.g., #define BOARD 1 for the first node, #define BOARD 2 for the second, etc.).
+* Build and deploy the code to your respective STM32F407G-DISC1 boards (gateway and each node).
 
 **Hardware Connections (Refer to `wiring_schematic.jpg` for details):**
 
