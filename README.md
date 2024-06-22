@@ -7,7 +7,7 @@ This project demonstrates a basic implementation of CAN Bus communication betwee
 * Three STM32F407G-DISC1 development boards.
 * Each node has a potentiometer for controlling LEDs.
 * User button on each node triggers LED update and transmits data via CAN Bus.
-* STM32F407V gateway receives LED data and controls its own internal LED based on the received value.
+* STM32F407G-DISC1 gateway receives LED data and controls its own internal LED based on the received value.
 
 **Hardware:**
 
